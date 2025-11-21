@@ -1,37 +1,18 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
-# Script to install packages: kanshi, atuin, ghostty, and keyd
+# Script to install packages
 
 set -e
 
-echo "Installing packages..."
+# Load helper functions
+source "${0:A:h}/helpers.zsh"
 
-# Install kanshi
-if [ -f "$(dirname "$0")/kanshi.zsh" ]; then
-    zsh "$(dirname "$0")/kanshi.zsh"
-else
-    echo "kanshi.zsh not found, skipping kanshi installation"
-fi
+echo "Starting installation..."
 
-# Install atuin
-if [ -f "$(dirname "$0")/atuin.zsh" ]; then
-    zsh "$(dirname "$0")/atuin.zsh"
-else
-    echo "atuin.zsh not found, skipping atuin installation"
-fi
+install_packages \
+    kanshi \
+    atuin \
+    ghostty \
+    keyd
 
-# Install ghostty
-if [ -f "$(dirname "$0")/ghostty.zsh" ]; then
-    zsh "$(dirname "$0")/ghostty.zsh"
-else
-    echo "ghostty.zsh not found, skipping ghostty installation"
-fi
-
-# Install keyd
-if [ -f "$(dirname "$0")/keyd.zsh" ]; then
-    zsh "$(dirname "$0")/keyd.zsh"
-else
-    echo "keyd.zsh not found, skipping keyd installation"
-fi
-
-echo "Packages installed."
+echo "Installation complete."
