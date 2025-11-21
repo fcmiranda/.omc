@@ -46,7 +46,9 @@
 !.local/share/waybar
 !.local/share/waybar/**
 
+!.config/kanshi
 !.config/kanshi/config.example
+!.config/kanshi/config.ultrawide
 
 # Locale and keyboard configuration files
 !.profile
