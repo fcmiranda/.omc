@@ -1,1 +1,1 @@
-eval "$(mise activate zsh)"
+../../.dotfiles/mise/.zsh/packages/mise.zsh

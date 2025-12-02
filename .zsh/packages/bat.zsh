@@ -1,0 +1,1 @@
+../../.dotfiles/bat/.zsh/packages/bat.zsh

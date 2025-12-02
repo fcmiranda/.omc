@@ -1,0 +1,1 @@
+../../.dotfiles/yazi/.zsh/packages/yazi.zsh

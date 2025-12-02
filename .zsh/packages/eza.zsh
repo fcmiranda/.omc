@@ -1,0 +1,1 @@
+../../.dotfiles/eza/.zsh/packages/eza.zsh

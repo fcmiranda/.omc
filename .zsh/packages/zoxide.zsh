@@ -1,1 +1,1 @@
-eval "$(zoxide init zsh)"
+../../.dotfiles/zoxide/.zsh/packages/zoxide.zsh

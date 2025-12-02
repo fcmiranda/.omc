@@ -1,3 +1,1 @@
-# binds to switch to vi command mode with ESC key
-bindkey -e
-bindkey '\e' vi-cmd-mode
+../../.dotfiles/zsh/.zsh/utils/binds.zsh
