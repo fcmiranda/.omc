@@ -14,6 +14,7 @@ install_packages \
     atuin \
     ghostty \
     keyd \
+    yazi \
     stow
 
 echo "Installation complete."
