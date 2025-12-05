@@ -5,34 +5,59 @@ typeset -g INSTALL_DIR="${0:A:h}"
 typeset -g PACKAGES_DIR="${INSTALL_DIR}/packages"
 typeset -g PLUGINS_DIR="${INSTALL_DIR}/plugins"
 
-# Generic runner
-run_scripts() {
-  local type="$1"
-  local dir="$2"
-  shift 2
+# Install a package using available package manager
+pkg_install() {
+  local pkg="$1"
+  if command -v yay &>/dev/null; then
+    yay -S --noconfirm "$pkg"
+  elif command -v pacman &>/dev/null; then
+    sudo pacman -S --noconfirm "$pkg"
+  else
+    print -P "  %F{red}✗%f No package manager found (yay/pacman)"
+    return 1
+  fi
+}
+
+# Run package installation scripts
+install_packages() {
   local -a items=("$@")
 
-  if (( ${#items[@]} == 0 )); then
-    return
-  fi
+  (( ${#items[@]} == 0 )) && return
 
-  print -P "%F{blue}:: %B${type}%b%f"
+  print -P "%F{blue}:: %BPackages%b%f"
 
   for item in "${items[@]}"; do
-    local script="${dir}/${item}.zsh"
+    if command -v "$item" &>/dev/null; then
+      print -P "  %F{cyan}✓%f %B${item}%b already installed"
+      continue
+    fi
+
+    local script="${PACKAGES_DIR}/${item}.zsh"
     if [[ -f "$script" ]]; then
       print -P "  %F{green}→%f Installing %B${item}%b..."
-      zsh "$script"
+      source "$script"
     else
-      print -P "  %F{yellow}⚠%f Script for %B${item}%b not found"
+      print -P "  %F{yellow}→%f Installing %B${item}%b via package manager..."
+      pkg_install "$item"
     fi
   done
 }
 
-install_packages() {
-  run_scripts "Packages" "$PACKAGES_DIR" "$@"
-}
-
+# Run plugin installation scripts
 install_plugins() {
-  run_scripts "Plugins" "$PLUGINS_DIR" "$@"
+  local -a items=("$@")
+
+  (( ${#items[@]} == 0 )) && return
+
+  print -P "%F{blue}:: %BPlugins%b%f"
+
+  for item in "${items[@]}"; do
+    local script="${PLUGINS_DIR}/${item}.zsh"
+    if [[ -f "$script" ]]; then
+      print -P "  %F{green}→%f Installing %B${item}%b..."
+      source "$script"
+    else
+      print -P "  %F{yellow}⚠%f Script for %B${item}%b not found"
+    fi
+  done
 }
