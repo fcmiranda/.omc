@@ -13,6 +13,7 @@ install_packages \
     kanshi \
     atuin \
     ghostty \
-    keyd
+    keyd \
+    stow
 
 echo "Installation complete."
