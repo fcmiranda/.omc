@@ -19,4 +19,7 @@ install_packages \
     visual-studio-code-bin \
     p7zip
 
+install_plugins \
+    zsh-plugins
+
 echo "Installation complete."
