@@ -18,7 +18,11 @@ install_packages \
     stow \
     visual-studio-code-bin \
     p7zip \
-    tmux
+    tmux \
+    yq \
+    figlet \
+    lolcat \
+    procs
 
 install_plugins \
     zsh-plugins \

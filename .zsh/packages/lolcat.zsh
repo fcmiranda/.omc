@@ -1,0 +1,1 @@
+../../.dotfiles/lolcat/.zsh/packages/lolcat.zsh
