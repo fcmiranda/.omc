@@ -22,7 +22,8 @@ install_packages \
     yq \
     figlet \
     lolcat \
-    procs
+    procs \
+    duf
 
 install_plugins \
     zsh-plugins \
