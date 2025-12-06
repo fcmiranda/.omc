@@ -18,6 +18,25 @@ pkg_install() {
   fi
 }
 
+# Check if a package is already installed (covers binaries and package DB)
+pkg_is_installed() {
+  local pkg="$1"
+
+  # If the binary exists in PATH, consider it installed
+  if command -v "$pkg" &>/dev/null; then
+    return 0
+  fi
+
+  # Fallback to package database check
+  if command -v yay &>/dev/null; then
+    yay -Qi "$pkg" &>/dev/null && return 0
+  elif command -v pacman &>/dev/null; then
+    pacman -Qi "$pkg" &>/dev/null && return 0
+  fi
+
+  return 1
+}
+
 # Run package installation scripts
 install_packages() {
   local -a items=("$@")
@@ -27,7 +46,7 @@ install_packages() {
   print -P "%F{blue}:: %BPackages%b%f"
 
   for item in "${items[@]}"; do
-    if command -v "$item" &>/dev/null; then
+    if pkg_is_installed "$item"; then
       print -P "  %F{cyan}✓%f %B${item}%b already installed"
       continue
     fi
