@@ -2,6 +2,9 @@
 
 # Install zsh plugins: zsh-autosuggestions, zsh-syntax-highlighting, and zsh-transient-prompt
 
+# Unset git env vars to avoid conflicts with bare repo dotfile setups
+unset GIT_DIR GIT_WORK_TREE
+
 ZSH_PLUGINS_DIR="${HOME}/.zsh-plugins"
 mkdir -p "$ZSH_PLUGINS_DIR"
 

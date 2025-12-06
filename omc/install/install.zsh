@@ -17,9 +17,11 @@ install_packages \
     yazi \
     stow \
     visual-studio-code-bin \
-    p7zip
+    p7zip \
+    tmux
 
 install_plugins \
-    zsh-plugins
+    zsh-plugins \
+    tmux-plugins
 
 echo "Installation complete."
