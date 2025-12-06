@@ -15,6 +15,8 @@ install_packages \
     ghostty \
     keyd \
     yazi \
-    stow
+    stow \
+    visual-studio-code-bin \
+    p7zip
 
 echo "Installation complete."
