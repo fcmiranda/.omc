@@ -23,7 +23,8 @@ install_packages \
     figlet \
     lolcat \
     procs \
-    duf
+    duf \
+    gh
 
 install_plugins \
     zsh-plugins \
