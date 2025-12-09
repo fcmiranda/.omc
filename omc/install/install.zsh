@@ -24,7 +24,8 @@ install_packages \
     lolcat \
     procs \
     duf \
-    gh
+    gh \
+    zen-browser-bin
 
 install_plugins \
     zsh-plugins \
