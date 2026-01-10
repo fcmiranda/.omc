@@ -25,7 +25,8 @@ install_packages \
     procs \
     duf \
     gh \
-    zen-browser-bin
+    zen-browser-bin \
+    opencode-bin
 
 install_plugins \
     zsh-plugins \
