@@ -26,7 +26,8 @@ install_packages \
     duf \
     gh \
     zen-browser-bin \
-    opencode-bin
+    opencode-bin \
+    crush-bin
 
 install_plugins \
     zsh-plugins \
