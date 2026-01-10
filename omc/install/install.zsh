@@ -27,6 +27,7 @@ install_packages \
     gh \
     zen-browser-bin \
     opencode-bin \
+    gum \
     crush-bin
 
 install_plugins \
