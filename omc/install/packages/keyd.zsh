@@ -5,6 +5,17 @@ set -e
 
 echo "Setting up keyd configuration..."
 
+# Ensure keyd is installed before configuring service
+if command -v pkg_is_installed &>/dev/null && command -v pkg_install &>/dev/null; then
+	if ! pkg_is_installed keyd; then
+		echo "Installing keyd package..."
+		pkg_install keyd
+	fi
+elif ! command -v keyd &>/dev/null; then
+	echo "keyd is not installed. Please install it and rerun this script."
+	exit 1
+fi
+
 # Create keyd config directory if it doesn't exist
 sudo mkdir -p /etc/keyd
 
