@@ -1,0 +1,1 @@
+../../.dotfiles/starship/.zsh/packages/starship.zsh

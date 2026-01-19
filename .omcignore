@@ -16,6 +16,8 @@
 
 !.config/starship
 !.config/starship/**
+!.config/starship/themes/
+!.config/starship/themes/**
 
 !.config/hypr/
 !.config/hypr/*
