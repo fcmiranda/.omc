@@ -1,1 +1,0 @@
-../../.dotfiles/startship/.zsh/packages/starship.zsh

@@ -1,0 +1,1 @@
+../../.dotfiles/zsh-plugins/.zsh/plugins/zsh-vi-mode-theme.zsh
