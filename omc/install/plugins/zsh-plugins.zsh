@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Install zsh plugins: zsh-autosuggestions, zsh-syntax-highlighting, and zsh-transient-prompt
+# Install zsh plugins: zsh-autosuggestions, zsh-syntax-highlighting, zsh-transient-prompt, and zsh-vi-mode
 
 # Unset git env vars to avoid conflicts with bare repo dotfile setups
 unset GIT_DIR GIT_WORK_TREE
@@ -24,3 +24,4 @@ install_zsh_plugin() {
 install_zsh_plugin "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions"
 install_zsh_plugin "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting"
 install_zsh_plugin "zsh-transient-prompt" "https://github.com/olets/zsh-transient-prompt.git"
+install_zsh_plugin "zsh-vi-mode" "https://github.com/jeffreytse/zsh-vi-mode.git"
