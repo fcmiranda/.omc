@@ -29,7 +29,8 @@ install_packages \
     opencode-bin \
     gum \
     sesh-bin \
-    crush-bin
+    crush-bin \
+    hugo \
 
 install_plugins \
     zsh-plugins \
