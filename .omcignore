@@ -7,17 +7,9 @@
 !omc/
 !omc/**/*
 
-!.zsh/
-!.zsh/**/*
-
 !.config/
 !.config/fastfetch
 !.config/fastfetch/**
-
-!.config/starship
-!.config/starship/**
-!.config/starship/themes/
-!.config/starship/themes/**
 
 !.config/hypr/
 !.config/hypr/*
@@ -37,9 +29,6 @@
 !.config/walker
 !.config/walker/**
 
-!.config/ghostty
-!.config/ghostty/**
-
 !.config/mako
 !.config/mako/**
 
@@ -47,10 +36,6 @@
 !.local/share
 !.local/share/waybar
 !.local/share/waybar/**
-
-!.config/kanshi
-!.config/kanshi/config.example
-!.config/kanshi/config.ultrawide
 
 # Locale and keyboard configuration files
 !.profile
