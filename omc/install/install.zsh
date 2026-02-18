@@ -25,6 +25,8 @@ install_packages \
     procs \
     duf \
     gh \
+    lazygit \
+    gh-dash \
     zen-browser-bin \
     opencode-bin \
     gum \
