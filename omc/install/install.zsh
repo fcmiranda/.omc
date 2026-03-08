@@ -33,7 +33,9 @@ install_packages \
     sesh-bin \
     crush-bin \
     hugo \
-    zmk-studio-bin
+    zmk-studio-bin \
+    playerctl \
+    cava
 
 install_plugins \
     zsh-plugins \
